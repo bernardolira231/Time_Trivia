@@ -34,20 +34,20 @@ void seleccion_de_lugar(char *nombre){
     int lugar = 0;
    printf ("\n\nHola %s, a continuacion te daremos cinco opciones que definiran tu futuro.", nombre); 
    printf ("\n\t 1.- Jardin Botanico \n \t 2.- Aula Magna \n \t 3.- Biblioteca \n \t 4.- Talleres \n \t 5.- TVU \n");
-   printf ("Elige con cuidado...   ");
-   scanf ("%d", &lugar);
+   printf("Elige con cuidado...   ");
+   scanf("%d", &lugar);
 
     switch (lugar){
-        case 1: printf ("Usted eligio el Jardin Botanico\n\n");
+        case 1: printf("Usted eligio el Jardin Botanico\n\n");
                 jardin_botanico();
                 break;
-        case 2: printf ("Usted eligio el Aula Magna");
+        case 2: printf("Usted eligio el Aula Magna");
         break;
-        case 3: printf ("Usted eligio la Biblioteca");
+        case 3: printf("Usted eligio la Biblioteca");
         break;
-        case 4: printf ("Usted eligio los Talleres");
+        case 4: printf("Usted eligio los Talleres");
         break;
-        case 5: printf ("Usted eligio ir a TVU");
+        case 5: printf("Usted eligio ir a TVU");
         break;   
     }
 
@@ -56,6 +56,18 @@ void seleccion_de_lugar(char *nombre){
 
 void jardin_botanico(){
 
-    printf ("Viajaste al Jardin Botanico en el año 800, ¿Con quien decide hablar? ");
+    int opc = 0;
+    printf ("Viajaste al Jardin Botanico en el año 800, ¿Con quien decide hablar?\n");
+    printf("1.- Samurai\n2.- Gariboy");
+    printf("\nHaz tu eleccion: ");
+    scanf("%d", &opc);
+
+    if(opc == 1){
+        printf("Hola viajero veo que vienes ...");
+        printf("");
+    }
+    if(opc == 2){
+        printf("Chispas perdiste dos puntos, pero valoramos tu buen gusto");
+    }
 
 }
