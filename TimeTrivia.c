@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 void datos_usuario(char *nombre);
 void seleccion_de_lugar(char *nombre);
@@ -21,8 +22,6 @@ int main(){
         datos_usuario(&nombre);
         seleccion_de_lugar(&nombre);
     }
-
-    
 }
 
 void datos_usuario(char *nombre){
@@ -42,21 +41,23 @@ void seleccion_de_lugar(char *nombre){
                 jardin_botanico();
                 break;
         case 2: printf("Usted eligio el Aula Magna");
-        break;
+                aula_magna();
+                break;
         case 3: printf("Usted eligio la Biblioteca");
-        break;
+                biblioteca();
+                break;
         case 4: printf("Usted eligio los Talleres");
-        break;
+                talleres();
+                break;
         case 5: printf("Usted eligio ir a TVU");
-        break;   
+                tvu();
+                break;   
     }
-
-  
 }
 
 void jardin_botanico(){
 
-    int opc = 0;
+    int opc = 0, repeat = 0;
     printf ("Viajaste al Jardin Botanico en el año 800, ¿Con quien decide hablar?\n");
     printf("1.- Samurai\n2.- Gariboy");
     printf("\nHaz tu eleccion: ");
@@ -65,9 +66,21 @@ void jardin_botanico(){
     if(opc == 1){
         printf("Hola viajero veo que vienes ...");
         printf("");
+        repeat = 1;
     }
     if(opc == 2){
-        printf("Chispas perdiste dos puntos, pero valoramos tu buen gusto");
+        printf("Chispas perdiste dos puntos, pero valoramos tu buen gusto\n");
     }
 
+    while(repeat == 0){
+        printf("Oh veo que gariboy no fue la clave pero te dejare volver a decidir conquien hablar\n");
+    }
 }
+
+void aula_magna(){}
+
+void biblioteca(){}
+
+void talleres(){}
+
+void tvu(){}
