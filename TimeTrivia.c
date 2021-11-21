@@ -9,6 +9,7 @@ void aula_magna();
 void biblioteca();
 void talleres();
 void tvu();
+void samurai();
 
 
 int main(){
@@ -64,8 +65,7 @@ void jardin_botanico(){
     scanf("%d", &opc);
 
     if(opc == 1){
-        printf("Hola viajero veo que vienes ...");
-        printf("");
+        samurai();
         repeat = 1;
     }
     if(opc == 2){
@@ -74,6 +74,17 @@ void jardin_botanico(){
 
     while(repeat == 0){
         printf("Oh veo que gariboy no fue la clave pero te dejare volver a decidir conquien hablar\n");
+        printf("1.- Samurai\n2.- Gariboy");
+        printf("\nHaz tu eleccion: ");
+        scanf("%d", &opc);
+
+        if(opc == 1){
+            samurai();
+            repeat = 1;
+        }
+        if(opc == 2){
+            printf("Chispas perdiste dos puntos, pero valoramos tu buen gusto\n");
+        }
     }
 }
 
@@ -84,3 +95,20 @@ void biblioteca(){}
 void talleres(){}
 
 void tvu(){}
+
+void samurai(){
+
+    int obj = 0, respuesta = 0;
+
+    printf("Hola viajero veo que escogiste venir al jardin botanico, en este lugar tu mision sera encontrar partes de mi armadura que perdi en la batalla contra el gariclan, para poder recoger los objetos que veas tendras que resolver un acertijo.\nBuscando por el jardin encontraste estos objetos cual quieres recoger");
+    printf("\n1.- Cactus \n2.- Katana \n3.- Piedra\n");
+    printf("Cual recogeras: ");
+    scanf("%d", &obj);
+
+    if(obj == 1){
+        printf("\n¿Cuantas personas caben en una manguera?\n");
+        printf("1) Un chorro\n2) 3.1416\n3) 299.792,458 kilómetros por segundo\n");
+        printf("R: ");
+        scanf("%d", &respuesta);
+    }
+}
