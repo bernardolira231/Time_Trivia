@@ -65,7 +65,7 @@ void jardin_botanico(int *score){
     scanf("%d", &opc);
 
     if(opc == 1){
-        samurai(*score);
+        samurai(&score);
         repeat = 1;
     }
     if(opc == 2){
@@ -80,7 +80,7 @@ void jardin_botanico(int *score){
         scanf("%d", &opc);
 
         if(opc == 1){
-            samurai(*score);
+            samurai(&score);
             repeat = 1;
         }
         if(opc == 2){
