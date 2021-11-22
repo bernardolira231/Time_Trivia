@@ -116,12 +116,80 @@ void samurai(int *score){
 
         if(respuesta == 1){
             printf("Has acertado ganas un punto\n");
+            *score = *score + 1;
         }
 
         if(respuesta == 2 || respuesta == 3){
             printf("Esa no es la respuesta correcta pierdes un punto");
             repeat = 1;
         }
+        while(repeat == 1){
+            printf("\n¿Cuantas personas caben en una manguera?\n");
+            printf("1) Un chorro\n2) 3.1416\n3) 299.792,458 kilómetros por segundo\n");
+            printf("R: ");
+            scanf("%d", &respuesta);
+
+            if(respuesta == 1){
+                printf("Has acertado ganas un punto\n");
+                repeat = 0;
+            }
+
+            if(respuesta == 2 || respuesta == 3){
+                printf("Esa no es la respuesta correcta pierdes un punto");
+                repeat = 1;
+            }
+        }
+    }
+    if(obj == 2){
+        printf("¿Cual es el codigo etico de los samurai?");
+        printf("1) Takataka\n2) El derecho al respeto ajeno es la paz\n3) Bushido");
+        printf("R: ");
+        scanf("%d", &respuesta);
+
+        if(respuesta == 3){
+            printf("Has acertado ganas un punto\n");
+            repeat = 0;
+        }
+
+        if(respuesta == 2 || respuesta == 1){
+            printf("Esa no es la respuesta correcta pierdes un punto");
+            repeat = 1;
+        }
+
+        while(repeat == 1){
+            printf("¿Cual es el codigo etico de los samurai?");
+            printf("1) Takataka\n2) El derecho al respeto ajeno es la paz\n3) Bushido");
+            printf("R: ");
+            scanf("%d", &respuesta);
+
+            if(respuesta == 3){
+                printf("Has acertado ganas un punto\n");
+                repeat = 0;
+            }
+
+            if(respuesta == 2 || respuesta == 1){
+                printf("Esa no es la respuesta correcta pierdes un punto");
+                repeat = 1;
+            }           
+        }
+    }
+
+    if(obj == 3){
+        printf("¿Que le dice un techo a otro techo?\n");
+        printf("1) Te echo de menos\n2) Somos tejanos\n3) Somos iguales\n");
+        printf("R: ");
+        scanf("%d", &respuesta);
+
+        if(respuesta == 1){
+            printf("Has acertado ganas un punto\n");
+            repeat = 0;
+        }
+
+        if(respuesta == 2 || respuesta == 3){
+            printf("Esa no es la respuesta correcta pierdes un punto");
+            repeat = 1;
+        }
+
         while(repeat == 1){
             printf("\n¿Cuantas personas caben en una manguera?\n");
             printf("1) Un chorro\n2) 3.1416\n3) 299.792,458 kilómetros por segundo\n");
